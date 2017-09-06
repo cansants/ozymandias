@@ -1,0 +1,48 @@
+{% extends "base.twig" %}
+
+{% block title %}Ozymandias{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/css/cover.css" />
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand"><!--cansants--></h3>
+          <nav class="nav nav-masthead">
+            <a class="nav-link active" href="{{ path_for('home') }}">{{title}}</a>
+            <a class="nav-link" href="{{ path_for('comparador') }}">Comparador</a>
+            <a class="nav-link" href="http://192.168.0.158:8000/" target="_blank">Status</a>
+            <!--
+            <a class="nav-link" href="#">Contact</a>
+            -->
+          </nav>
+        </div>
+      </div>
+
+      <div class="inner cover">
+        <h1 class="cover-heading">{{title}}</h1>
+        <p class="lead">Quedan {{contador}} imágenes por optimizar.</p>
+        <p class="lead">
+          <a href="{{ path_for('comparador') }}" class="btn btn-lg btn-secondary">Comparar</a>
+        </p>
+      </div>
+
+      <div class="mastfoot">
+        <div class="inner">
+          <!--<p>Cover template for <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>-->
+          <p></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
