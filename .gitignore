@@ -1,2 +1,5 @@
 /vendor/*
 /logs/*
+/src/public/images/backup_default/
+/src/public/images/compressed/
+/src/public/images/default/
